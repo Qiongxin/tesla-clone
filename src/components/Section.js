@@ -1,24 +1,29 @@
 import React from 'react'
 import styled from 'styled-components'
+import Fade from 'react-reveal/Fade';
 
 function Section({title, description, leftText, rightText, bgImg}) {
   return (
     <Container bg = {bgImg}>
-        <Text>
-            <h1>{title}</h1>
-            <p>{description}</p>
-        </Text>
+        <Fade bottom>
+            <Text>
+                <h1>{title}</h1>
+                <p>{description}</p>
+            </Text>
+        </Fade>
         <BottomWrap>
-            <Buttons>
-                <LeftButton>
-                    {leftText}
-                </LeftButton>
-                {rightText && 
-                <RightButton>
-                    {rightText}
-                </RightButton>
-                }
-            </Buttons>
+            <Fade bottom>
+                <Buttons>
+                    <LeftButton>
+                        {leftText}
+                    </LeftButton>
+                    {rightText && 
+                    <RightButton>
+                        {rightText}
+                    </RightButton>
+                    }
+                </Buttons>
+            </Fade>
             <ArrowImg src='/images/down-arrow.svg' />
         </BottomWrap>
 
@@ -48,8 +53,14 @@ const Text = styled.div`
 const Buttons = styled.div`
     display: flex;
     justify-content: center;
+    align-items: center;
     text-transform: uppercase;
     margin-bottom: 30px;
+
+    @media( max-width: 768px ) {
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
 `
 
 const LeftButton = styled.div`
@@ -64,10 +75,10 @@ const LeftButton = styled.div`
     opacity: 0.85;
     font-size: 12px;
     cursor: pointer;
+    margin: 10px 15px;
 `
 
 const RightButton = styled(LeftButton)`
-    margin-left: 28px;
     background-color: white;
     opacity: 0.65;
     color: black;
@@ -75,7 +86,6 @@ const RightButton = styled(LeftButton)`
 
 const ArrowImg = styled.img`
     height: 40px;
-    margin-top: 20px;
     animation: animateDown infinite 1.5s;
 `
 
