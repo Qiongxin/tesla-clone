@@ -42,5 +42,9 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://qiongxin.github.io/tesla-clone/"
+  "homepage": "https://qiongxin.github.io/tesla-clone/",
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
+  },
+  "deploy" : "npm run build&&gh-pages -d build"
 }
