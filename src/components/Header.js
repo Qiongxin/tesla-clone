@@ -13,7 +13,7 @@ function Header() {
   return (
     <Container>
         <a>
-            <img src="/images/logo.svg" alt="Tesla logo" />
+            <img src="images/logo.svg" alt="Tesla logo" />
         </a>
         <Menu>
             {cars && cars.map((car, index) => (
@@ -32,7 +32,7 @@ function Header() {
                     <CloseIcon onClick = {() => setCondition(false)}/>
                 </CloseWrapper>
                 {cars && cars.map((car, index) => (
-                    <li><a href="#" key={index}>{car}</a></li>
+                    <li key={index}><a href="#">{car}</a></li>
                 ))}
                 <li><a href="#">Existing Inventory</a></li>
                 <li><a href="#">Used Inventory</a></li>
