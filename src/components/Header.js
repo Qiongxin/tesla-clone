@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import CloseIcon from '@material-ui/icons/Close';
 import { selectCars } from '../features/car/carSlice';
 import { useSelector } from 'react-redux';
-
+import { Link } from 'react-router-dom';
 
 function Header() {
   const [condition, setCondition] = useState(false)
@@ -12,17 +12,17 @@ function Header() {
 
   return (
     <Container>
-        <a>
-            <img src="images/logo.svg" alt="Tesla logo" />
-        </a>
+        <Link to="/tesla-clone">
+            <img src='images/logo.svg' alt="Tesla logo" />
+        </Link>
         <Menu>
             {cars && cars.map((car, index) => (
-                <a href="#" key={index}>{car}</a>
+                <Link to="/tesla-clone" key={index}>{car}</Link>
             ))}
         </Menu>
         <RightWrap>
-            <a href="#">Shop</a>
-            <a href="#">Tesla Account</a>
+            <Link to="/order">Shop</Link>
+            <Link to="/tesla-clone">Tesla Account</Link>
             <MenuIcon onClick = {() => setCondition(true)}/>
         </RightWrap>
 
@@ -32,13 +32,13 @@ function Header() {
                     <CloseIcon onClick = {() => setCondition(false)}/>
                 </CloseWrapper>
                 {cars && cars.map((car, index) => (
-                    <li key={index}><a href="#">{car}</a></li>
+                    <li key={index}><Link to="/tesla-clone">{car}</Link></li>
                 ))}
-                <li><a href="#">Existing Inventory</a></li>
-                <li><a href="#">Used Inventory</a></li>
-                <li><a href="#">Trade-In</a></li>
-                <li><a href="#">Cybertruck</a></li>
-                <li><a href="#">Roadster</a></li>
+                <li><Link to="/tesla-clone">Existing Inventory</Link></li>
+                <li><Link to="/tesla-clone">Used Inventory</Link></li>
+                <li><Link to="/tesla-clone">Trade-In</Link></li>
+                <li><Link to="/tesla-clone">Cybertruck</Link></li>
+                <li><Link to="/tesla-clone">Roadster</Link></li>
             </ul>
         </Sidebar>
     </Container>

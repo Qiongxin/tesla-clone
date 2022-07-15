@@ -1,12 +1,15 @@
 import React from 'react'
-import Header from './components/Header'
-import Home from './components/Home'
+import { Routes, Route} from "react-router-dom"
+import Order from './components/Order'
+import Homepage from './components/Homepage'
 
 function App() {
   return (
     <div>
-      <Header />
-      <Home />
+      <Routes>
+        <Route path="tesla-clone" element={<Homepage />} />
+        <Route path="order" element={<Order />} />
+      </Routes>
     </div>
   )
 }
