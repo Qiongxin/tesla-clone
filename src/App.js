@@ -8,7 +8,7 @@ function App() {
     <div>
       <Routes>
         <Route path="tesla-clone" element={<Homepage />} />
-        <Route path="order" element={<Order />} />
+        <Route path="tesla-clone/order" element={<Order />} />
       </Routes>
     </div>
   )
