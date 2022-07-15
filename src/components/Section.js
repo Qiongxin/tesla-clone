@@ -24,7 +24,7 @@ function Section({title, description, leftText, rightText, bgImg}) {
                     }
                 </Buttons>
             </Fade>
-            <ArrowImg src='images/down-arrow.svg' />
+            <ArrowImg src='tesla-clone/images/down-arrow.svg' />
         </BottomWrap>
 
     </Container>
@@ -36,7 +36,7 @@ export default Section
 const Container = styled.div`
     height: 100vh;
     width: 100vw;
-    background-image: ${props => `url('images/${props.bg}')` };
+    background-image: ${props => `url('tesla-clone/images/${props.bg}')` };
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

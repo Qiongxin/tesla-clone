@@ -7,12 +7,12 @@ function Order() {
     <Container>
         <TopWrapper>
             <Link to="/tesla-clone">
-                <img src='images/logo.svg' alt="Tesla logo" />
+                <img src='tesla-clone/images/logo.svg' alt="Tesla logo" />
             </Link>
         </TopWrapper>
         <OrderDetail>
             <OrderLeft>
-                <img src="images/order-model-s.jpeg" alt="model s" />
+                <img src="tesla-clone/images/order-model-s.jpeg" alt="model s" />
                 <BottomBar>
                     <p>$142,890 Purchase price</p>
                     <p>$16,200 Potential savings over 6 years</p>
@@ -117,7 +117,7 @@ const TopWrapper = styled.div`
     img {
             height: 15px;
             width: 120px;
-            margin-top: 15px;
+            margin-top: 18px;
         }
 `
 const BottomBar = styled.div`
@@ -155,8 +155,9 @@ const OrderLeft = styled.div`
     width: 65%;
 
     img {
-        width: 400px;
-        height: 600px;
+        width: 90%;
+        height: 60%;
+        margin-top: 110px;
     }
 `
 
