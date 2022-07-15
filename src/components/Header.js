@@ -21,7 +21,7 @@ function Header() {
             ))}
         </Menu>
         <RightWrap>
-            <Link to="/order">Shop</Link>
+            <Link to="/tesla-clone/order">Shop</Link>
             <Link to="/tesla-clone">Tesla Account</Link>
             <MenuIcon onClick = {() => setCondition(true)}/>
         </RightWrap>
