@@ -1,8 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 import Fade from 'react-reveal/Fade';
 
 function Section({title, description, leftText, rightText, bgImg}) {
+
   return (
     <Container bg = {bgImg}>
         <Fade bottom>
@@ -14,9 +16,11 @@ function Section({title, description, leftText, rightText, bgImg}) {
         <BottomWrap>
             <Fade bottom>
                 <Buttons>
-                    <LeftButton>
-                        {leftText}
-                    </LeftButton>
+                    <Link to="/tesla-clone/order" state={{ model: "model s" }}>
+                        <LeftButton>
+                            {leftText}
+                        </LeftButton>
+                    </Link>
                     {rightText && 
                     <RightButton>
                         {rightText}

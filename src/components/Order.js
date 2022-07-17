@@ -1,8 +1,11 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation} from 'react-router-dom'
 import styled from 'styled-components'
 
 function Order() {
+    const location = useLocation()
+    const {model} = location.state
+
   return (
     <Container>
         <TopWrapper>
@@ -19,7 +22,7 @@ function Order() {
                 </BottomBar>
             </OrderLeft>
             <OrderRight>
-                <h1>Model S</h1>
+                <h1>{model}</h1>
                 <p>Estimated Delivery: Nov 2022 - Feb 2023</p>
                 <Options>
                     <p>Purchase Price</p>
